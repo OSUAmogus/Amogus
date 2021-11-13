@@ -13,8 +13,11 @@ public class AnimationControl : MonoBehaviour
     void Update()
     {
         MoveSide = Input.GetAxisRaw("Horizontal");
-        animator.SetFloat("Hmov", Mathf.Abs(MoveSide));
-
         MoveUp = Input.GetAxisRaw("Vertical");
+        MoveDown = Input.GetAxisRaw("Vertical");
+
+        animator.SetFloat("Hmov", Mathf.Abs(MoveSide));
+        animator.SetFloat("Umov", Mathf.Abs(MoveUp));
+        animator.SetFloat("Dmov", Mathf.Abs(MoveDown));
     }
 }
