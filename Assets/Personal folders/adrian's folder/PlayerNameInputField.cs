@@ -34,7 +34,7 @@ public class PlayerNameInputField : MonoBehaviour
 
     public void SetPlayerName(string value) {
         if (string.IsNullOrEmpty(value)) {
-            Debug.LogError("Player name is null or empty.");
+            //Debug.LogError("Player name is null or empty.");
             return;
         }
         PhotonNetwork.NickName = value;
