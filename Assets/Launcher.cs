@@ -10,6 +10,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     [SerializeField]
     private byte maxPlayersPerRoom = 4;
 
+
     #region Private Serializable Fields
 
     #endregion
@@ -57,6 +58,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     }
     public override void OnJoinedRoom() {
         Debug.Log("OnJoinedRoom() called. Client is in a room.");
+        PhotonNetwork.Instantiate("Joe", new Vector3(0, 0, 0), Quaternion.identity, 0);
     }
 
     #endregion
