@@ -17,7 +17,7 @@ public class AnimationControl : MonoBehaviour
         MoveDown = Input.GetAxisRaw("Vertical");
 
         animator.SetFloat("Hmov", Mathf.Abs(MoveSide));
-        animator.SetFloat("Umov", Mathf.Abs(MoveUp));
-        animator.SetFloat("Dmov", Mathf.Abs(MoveDown));
+        animator.SetFloat("Umov", MoveUp);
+        animator.SetFloat("Dmov", MoveDown);
     }
 }
