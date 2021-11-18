@@ -10,8 +10,8 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
 
     [SerializeField] string gameVersion = "0.0.0";
 
-    [SerializeField] GameObject connect2Server;
-    [SerializeField] GameObject connectedText;
+    [SerializeField] GameObject connect2masterScreen;
+    [SerializeField] GameObject joinRoomScreen;
 
     public void Connect()
     {
@@ -22,8 +22,8 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster()
     {
         Debug.Log("Connected to master");
-        connect2Server.SetActive(false);
-        connectedText.SetActive(true);
+        connect2masterScreen.SetActive(false);
+        joinRoomScreen.SetActive(true);
     }
 
     public override void OnDisconnected(DisconnectCause cause)
@@ -40,6 +40,8 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         Debug.Log("OnJoinedRoom()");
+
+
         PhotonNetwork.Instantiate("Joe", new Vector3(0, 0, 0), Quaternion.identity, 0);
     }
 }
