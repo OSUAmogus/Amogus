@@ -41,7 +41,6 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     {
         Debug.Log("OnJoinedRoom()");
 
-
         PhotonNetwork.Instantiate("Joe", new Vector3(0, 0, 0), Quaternion.identity, 0);
     }
 }
