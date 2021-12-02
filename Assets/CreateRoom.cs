@@ -8,7 +8,6 @@ public class CreateRoom : MonoBehaviourPunCallbacks
 {
     public void Create()
     {
-
-        PhotonNetwork.JoinRandomRoom();
+        PhotonNetwork.CreateRoom("myroomname");
     }
 }
