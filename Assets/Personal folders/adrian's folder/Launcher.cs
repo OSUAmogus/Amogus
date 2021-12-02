@@ -107,6 +107,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     }
     public override void OnJoinedRoom() {
         Debug.Log("OnJoinedRoom() called. Client is in a room.");
+        GameObject.Find("JoinServerUI").SetActive(false);
         PhotonNetwork.Instantiate("AmogusPlayer", new Vector3(0, 0, 0), Quaternion.identity, 0);
     }
 
